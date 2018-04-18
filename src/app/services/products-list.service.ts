@@ -13,7 +13,7 @@ export class ProductsListService {
 
   constructor() { }
 
-  getAllProducts(): Product[] {
+  public getAllProducts(): Product[] {
       return this.data ;
   }
 
