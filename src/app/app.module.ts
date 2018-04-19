@@ -12,14 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
+import { MyRoutingModule } from './domain/myRoutingModule/myrouting.module';
 
-const tableRoutage = [
-  { path: 'list', component: ProductsListComponent },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'product/:id', component: ProductsDetailComponent },
-  { path: '', redirectTo: '/welcome', pathMatch: 'full'},
-  { path: '**', component: NotFoundComponent}
-];
+
 
 @NgModule({
   declarations: [
@@ -34,7 +29,7 @@ const tableRoutage = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(tableRoutage)
+    MyRoutingModule
   ],
   providers: [
     ProductsListService
